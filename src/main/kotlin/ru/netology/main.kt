@@ -1,14 +1,12 @@
 package ru.netology
 
-import java.util.*
-
 fun main() {
 
-    var likes = 21
-    val designationOfPeople = when (likes) {
-        1, 21, 31, 41, 51, 61, 71, 81, 91, 101 -> "человеку"
-
-        else -> "людям"
+    var likes = 1001
+    val designationOfPeople = if (likes % 10 == 1 && likes % 100 != 11) {
+        "человеку"
+    } else {
+        "людям"
     }
 
     println("Понравилось $likes $designationOfPeople")
